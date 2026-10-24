@@ -53,7 +53,7 @@ jobs:
           mka bacon -j$(nproc --all)
 
       - name: Upload ROM File
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: LineageOS-Rosy-Build
           path: workspace/out/target/product/rosy/*.zip
