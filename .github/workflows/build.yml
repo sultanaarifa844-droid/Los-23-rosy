@@ -38,12 +38,12 @@ jobs:
           repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --depth=1
           repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
-      - name: Clone Rosy Device Trees
+      - name: Clone Rosy Working Trees
         run: |
           cd workspace
-          git clone https://github.com/LineageOS/android_device_xiaomi_rosy.git -b lineage-21.0 device/xiaomi/rosy
-          git clone https://github.com/LineageOS/android_vendor_xiaomi_rosy.git -b lineage-21.0 vendor/xiaomi/rosy
-          git clone https://github.com/LineageOS/android_kernel_xiaomi_rosy.git -b lineage-21.0 kernel/xiaomi/rosy
+          git clone https://github.com/LineageOS/android_device_xiaomi_rosy.git -b lineage-20.0 device/xiaomi/rosy
+          git clone https://github.com/TheMuppets/proprietary_vendor_xiaomi_rosy.git -b lineage-20.0 vendor/xiaomi/rosy
+          git clone https://github.com/LineageOS/android_kernel_xiaomi_rosy.git -b lineage-20.0 kernel/xiaomi/rosy
 
       - name: Build ROM
         run: |
